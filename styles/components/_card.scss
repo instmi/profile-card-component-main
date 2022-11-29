@@ -1,0 +1,64 @@
+@import '../abstract/variables';
+
+.card {
+   background-color: $card-background-color;
+   border-radius: 1rem;
+   box-shadow: 0 0.625rem 2.1875rem 0.625rem hsla(0, 0%, 0%, 0.1);
+   height: auto;
+   overflow: hidden;
+   text-align: center;
+   width: 20.3125rem;
+
+   @media screen and (min-width: 90rem) {
+      width: 21.5625rem;
+   }
+
+   &__content {
+      margin-top: -3.25rem;
+
+      img {
+         border: 0.3125rem solid $card-background-color;
+         border-radius: 50%;
+         height: 6.25rem;
+         width: 6.25rem;
+      }
+
+      h1 {
+         color: $heading-color;
+         font-size: $heading-font-size;
+         margin: 1rem 0 0.5rem 0;
+
+         span {
+            font-weight: $regular-font;
+         }
+      }
+
+      p {
+         font-size: 0.8125rem;
+         margin-bottom: 1.5rem;
+      }
+
+      .card__stats {
+         border-top: 0.0625rem solid $border-color;
+         display: flex;
+         justify-content: space-between;
+         padding: 1.5rem 3rem;
+
+         div span {
+            display: block;
+
+            &:first-child {
+               color: $heading-color;
+               font-size: $heading-font-size;
+               font-weight: $bold-font;
+               margin: 0.25rem 0;
+            }
+
+            &:nth-child(2) {
+               font-size: 0.6875rem;
+               letter-spacing: 0.0625rem;
+            }
+         }
+      }
+   }
+}
